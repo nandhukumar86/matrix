@@ -1,8 +1,8 @@
 namespace MatrixCalc
 {
-    public class MatrixOperations
+    public static class MatrixOperations
     {
-        public static int[,] AddMatrices(int[,] matrixA, int[,] matrixB)
+        public static double[,] AddMatrices(double[,] matrixA, double[,] matrixB)
         {
             int rows = matrixA.GetLength(0);
             int cols = matrixA.GetLength(1);
@@ -12,7 +12,7 @@ namespace MatrixCalc
                 throw new ArgumentException("Matrices must have the same dimensions for addition.");
             }
 
-            int[,] result = new int[rows, cols];
+            double[,] result = new double[rows, cols];
 
             for (int i = 0; i < rows; i++)
             {
@@ -25,11 +25,11 @@ namespace MatrixCalc
             return result;
         }
 
-        public static int[,] MultiplyMatrixWithScalar(int[,] matrix, int scalar)
+        public static double[,] MultiplyMatrixWithScalar(double[,] matrix, double scalar)
         {
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
-            int[,] result = new int[rows, cols];
+            double[,] result = new double[rows, cols];
 
             for (int i = 0; i < rows; i++)
             {
@@ -42,7 +42,7 @@ namespace MatrixCalc
             return result;
         }
 
-        public static int[,] MultiplyMatrixWithVector(int[,] matrix, int[] vector)
+        public static double[,] MultiplyMatrixWithVector(double[,] matrix, double[] vector)
         {
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
@@ -52,7 +52,7 @@ namespace MatrixCalc
                 throw new ArgumentException("The number of columns in the matrix must match the length of the vector.");
             }
 
-            int[,] result = new int[rows, cols];
+            double[,] result = new double[rows, cols];
 
             for (int i = 0; i < rows; i++)
             {
@@ -65,7 +65,7 @@ namespace MatrixCalc
             return result;
         }
 
-        public static int[,] MultiplyMatrices(int[,] matrixA, int[,] matrixB)
+        public static double[,] MultiplyMatrices(double[,] matrixA, double[,] matrixB)
         {
             int rowsA = matrixA.GetLength(0);
             int colsA = matrixA.GetLength(1);
@@ -77,7 +77,7 @@ namespace MatrixCalc
                 throw new ArgumentException("Number of columns in matrix A must be equal to number of rows in matrix B.");
             }
 
-            int[,] result = new int[rowsA, colsB];
+            double[,] result = new double[rowsA, colsB];
 
             for (int i = 0; i < rowsA; i++)
             {
@@ -94,7 +94,7 @@ namespace MatrixCalc
             return result;
         }
 
-        public static int[,] CustomAddition(int[,] matrixA, int[,] matrixB, int[,] matrixC)
+        public static double[,] CustomAddition(double[,] matrixA, double[,] matrixB, double[,] matrixC)
         {
             int rowsA = matrixA.GetLength(0);
             int colsA = matrixA.GetLength(1);
@@ -108,14 +108,14 @@ namespace MatrixCalc
             throw new ArgumentException("All matrices must have the same dimensions.");
             }
 
-            int[,] result = new int[rowsA, colsA];
+            double[,] result = new double[rowsA, colsA];
 
             for (int i = 0; i < rowsA; i++)
             {
                 for (int j = 0; j < colsA; j++)
                 {
-                    int x = i + j; // Example of varying x
-                    int y = i - j; // Example of varying y
+                    double x = 0.5; // Example of varying x
+                    double y = 0.5; // Example of varying y
                     result[i, j] = (x * matrixA[i, j]) + (y * (matrixB[i, j] + matrixC[i, j]));
                 }
             }
@@ -123,12 +123,12 @@ namespace MatrixCalc
             return result;
         }
         
-        public static int[,] ColumnOperations(int[,] matrix, int[][] columnOperations)
+        public static double[,] ColumnOperations(double[,] matrix, int[][] columnOperations)
         {
             int rows = matrix.GetLength(0);
             int cols = columnOperations.Length;
 
-            int[,] result = new int[rows, cols];
+            double[,] result = new double[rows, cols];
 
             for (int j = 0; j < cols; j++)
             {
@@ -146,6 +146,23 @@ namespace MatrixCalc
                             throw new ArgumentException("Index out of bounds in column operations.");
                         }
                     }
+                }
+            }
+
+            return result;
+        }
+
+        public static double[,] TransposeMatrix(double[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+            double[,] result = new double[cols, rows];
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    result[j, i] = matrix[i, j];
                 }
             }
 
