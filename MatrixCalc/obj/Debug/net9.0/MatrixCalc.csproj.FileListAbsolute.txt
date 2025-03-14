@@ -1,0 +1,15 @@
+D:\coding\matrix\MatrixCalc\bin\Debug\net9.0\MatrixCalc.exe
+D:\coding\matrix\MatrixCalc\bin\Debug\net9.0\MatrixCalc.deps.json
+D:\coding\matrix\MatrixCalc\bin\Debug\net9.0\MatrixCalc.runtimeconfig.json
+D:\coding\matrix\MatrixCalc\bin\Debug\net9.0\MatrixCalc.dll
+D:\coding\matrix\MatrixCalc\bin\Debug\net9.0\MatrixCalc.pdb
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.GeneratedMSBuildEditorConfig.editorconfig
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.AssemblyInfoInputs.cache
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.AssemblyInfo.cs
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.csproj.CoreCompileInputs.cache
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.sourcelink.json
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.dll
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\refint\MatrixCalc.dll
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.pdb
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\MatrixCalc.genruntimeconfig.cache
+D:\coding\matrix\MatrixCalc\obj\Debug\net9.0\ref\MatrixCalc.dll
