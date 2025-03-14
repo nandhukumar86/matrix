@@ -18,9 +18,9 @@ namespace MatrixCalc
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    A[i, j] = i + j;
-                    B[i, j] = i + j;
-                    C[i, j] = i + j;
+                    A[i, j] = rand.Next(1, 7);
+                    B[i, j] = rand.Next(1, 7);
+                    C[i, j] = rand.Next(1, 7);
                 }
             }
 
@@ -34,18 +34,18 @@ namespace MatrixCalc
             jaggedArray[1] = new int[] { 3 };
 
 
-            Console.WriteLine("--------------------");
-            PrintMatrix(MatrixOperations.AddMatrices(A, B));
-            Console.WriteLine("--------------------");
-            PrintMatrix(MatrixOperations.MultiplyMatrixWithScalar(A, scalar));
-            Console.WriteLine("--------------------");
-            PrintMatrix(MatrixOperations.MultiplyMatrixWithVector(A, vector));
-            Console.WriteLine("--------------------");
-            PrintMatrix(MatrixOperations.MultiplyMatrices(A, D));
-            Console.WriteLine("--------------------");
+            // Console.WriteLine("--------------------");
+            // PrintMatrix(MatrixOperations.AddMatrices(A, B));
+            // Console.WriteLine("--------------------");
+            // PrintMatrix(MatrixOperations.MultiplyMatrixWithScalar(A, scalar));
+            // Console.WriteLine("--------------------");
+            // PrintMatrix(MatrixOperations.MultiplyMatrixWithVector(A, vector));
+            // Console.WriteLine("--------------------");
+            // PrintMatrix(MatrixOperations.MultiplyMatrices(A, D));
+            // Console.WriteLine("--------------------");
             PrintMatrix(MatrixOperations.CustomAddition(A, B, C));
-            Console.WriteLine("--------------------");
-            PrintMatrix(MatrixOperations.ColumnOperations(A, jaggedArray));
+            // Console.WriteLine("--------------------");
+            // PrintMatrix(MatrixOperations.ColumnOperations(A, jaggedArray));
 
         }
 

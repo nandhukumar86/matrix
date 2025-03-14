@@ -23,7 +23,7 @@ namespace MatrixCalc
             }
 
             return result;
-        }
+        }   
 
         public static double[,] MultiplyMatrixWithScalar(double[,] matrix, double scalar)
         {
@@ -114,13 +114,37 @@ namespace MatrixCalc
             {
                 for (int j = 0; j < colsA; j++)
                 {
-                    double x = 0.5; // Example of varying x
-                    double y = 0.5; // Example of varying y
-                    result[i, j] = (x * matrixA[i, j]) + (y * (matrixB[i, j] + matrixC[i, j]));
+                    double x = 0; // Example of varying x
+                    double y = 0; // Example of varying y
+
+                    (x, y) = CalculateWeights(matrixA[i, j], matrixB[i, j], matrixC[i, j]);
+
+                    result[i, j] = (x * matrixA[i, j]) + (y * ((matrixB[i, j] + matrixC[i, j])/2));
                 }
             }
 
             return result;
+        }
+        
+        public static (double x, double y) CalculateWeights(double a, double b, double c)
+        {
+            if(a == 0 && b + c > 0)
+            {
+                return (0, 1);
+            }
+            else if(a > 0 && b + c == 0)
+            {
+                return (1, 0);
+            }
+            else if(a > 0 && b + c > 0)
+            {
+                return (0.5, 0.5);
+            }
+            else
+            {
+                return (0, 0);
+            }
+
         }
         
         public static double[,] ColumnOperations(double[,] matrix, int[][] columnOperations)
