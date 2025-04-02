@@ -25,5 +25,5 @@ function calculateDimensions(startingGrid, dimension) {
 }
 
 // Example usage
-const result = calculateDimensions([2, 3], [5, 6]); // Zero-based index
+const result = calculateDimensions([11, 19], [1, 1]); // Zero-based index
 console.log(result);
