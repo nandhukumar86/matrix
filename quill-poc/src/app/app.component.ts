@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Quill from 'quill';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quill-poc';
+
+  onContentUpdate(content: string) {
+    console.log('Editor content:', content);
+  }
 }
